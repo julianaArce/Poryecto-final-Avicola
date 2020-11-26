@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="/materialize/css/materialize.min.css")
+        link(rel="stylesheet", href="/materialize/css/cuenta.css")
+        //link(rel="stylesheet", href="/css/app.css")
+        link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
+        title Listado Usuarios 
+    body.Imagen-fondo
+        nav.nav-wrapper.menu
+            a.brand-logo(href='#')  
+            ul#nav-mobile.right.hide-on-med-and-down
+                li
+                    a(href="/" ) volver a la Pagina Inicio
+        center
+            form(action="/ListaClientes")
+                .card-panel.Inicio
+                    H2 Lista nombre clientes
+                        ul.editarletra
+                            if (ListaCliente)
+                                each contador in ListaCliente
+                                    li
+                                        a(href=`/PerfilUsuarios/ActualizarUsuario/${contador.url}`)= contador.nombre
+                            
+    script(src="/materialize/js/materialize.min.js") 
+    script(src="/materialize/js/jquery-3.5.1.min.js")          
+    block contenido
+    

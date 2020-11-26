@@ -1,0 +1,61 @@
+.imagen-gallina {
+    height: 100vh;
+    width: 100%;
+    background-image: url(/Imagenes/gallina5.jpg);
+    padding: 1px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-size: cover;
+    background-position: center;
+    background-color: #2E2E2E;
+    background-blend-mode: soft-light;
+    
+    
+}
+.estilo-panel{
+    padding-top: 10px;
+    
+}
+.alineacion-texto{
+    text-align: center;
+}
+.contenido-bienvenido{
+    
+    font-style:italic;
+    font-weight: 700;
+    width: 100%;
+    display: inline-block;
+    
+    
+}
+.fondo-panel{
+    width: 100vh;
+    display: inline-block;
+    padding-top: 200px;
+    
+}
+
+.lbl1-inicio{
+    font-weight: 500;
+    font-family: sans-serif;
+    color:white;
+    font-size: 32px;
+    text-align: center;
+}
+.lbl2-inicio{
+    font-weight: 500;
+    font-family: sans-serif;
+    color:white;
+    font-size: 24px;
+    text-align: center;
+}
+.divINicio{
+    width:700px;
+    background-color: #e9e3e354;
+    border-radius: 40px;
+    padding: 2%;
+    
+  }

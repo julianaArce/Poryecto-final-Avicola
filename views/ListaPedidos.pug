@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="/materialize/css/materialize.min.css")
+        link(rel="stylesheet", href="/materialize/css/pedido.css")
+        link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
+        script(src='https://kit.fontawesome.com/069f0f74da.js' crossorigin='anonymous')
+        title Mi Pedido
+    body.Imagen-fondo
+        nav.nav-wrapper.menu 
+            ul#nav-mobile.right.hide-on-med-and-down
+                li
+                    a(href= `/perfilUsuarios/ActualizarUsuario/${cliente.url}` ) Volver al Perfil
+                li
+                    a(href="/cerrar-sesion" ) Cerrar Sesion
+        section(style='width: 100%;text-align: center;')
+            center
+                .listado-pedido
+                    .card-panel.Inicio
+                        center
+                            h2 LISTA PEDIDOS
+                            if MiPedido.length
+                                table
+                                    thead
+                                        tr
+                                        th Id
+                                        th Cantidad
+                                        th Descripcion
+                                        th Fecha
+                                        th Estado
+                                    each contador in MiPedido
+                                        tbody
+                                            tr.contenedor-recorrido
+                                            td=contador.id
+                                            td=contador.cantidad
+                                            td=contador.Descripcion
+                                            td=contador.Fecha
+                                            td
+                                                .seleccionar-opcion(data-pedidos=contador.id)
+                                                    if contador.Estado
+                                                        i.far.fa-check-circle.completo
+                                                    else
+                                                        i.far.fa-check-circle
+                                            
+                                                    i.fas.fa-trash
+                                    .avance
+                                        h2 Progreso de pedidos
+                                    #barra-avance.barra-avance
+                                        #porcentaje.porcentaje    
+                            else 
+                                p No hay pedidos asociados para el cliente
+
+script(src="/dist/bundle.js")

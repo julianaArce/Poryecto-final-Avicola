@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="/materialize/css/materialize.min.css")
+        link(rel="stylesheet", href="/materialize/css/cambios.css")
+        link(rel="stylesheet", href="/materialize/css/css_personal.css")
+        link(rel="https://fonts.googleapis.com/icon?family=Material+Icons", href="stylesheet")
+        
+        title Avicola SMIK
+    body
+        nav.nav-wrapper.menu
+            a.brand-logo(href='#')  
+            ul#nav-mobile.right.hide-on-med-and-down
+                li
+                    a(href='/Login') Iniciar Sesion 
+                li
+                    a(href="/UsuariosNuevos" ) Registrate
+
+        .imagen-gallina
+            .estilo-panel
+                .alineacion-texto
+                    .contenido-bienvenido
+                        h2 Bienvenidos a nuestra pagina
+                        section.fondo-panel
+                            .divINicio
+                                p.lbl1-inicio HUEVOS FRESCOS Y RICOS PARA SU CASA Y LOCAL
+                                p.lbl2-inicio Puedes realizar tu pedido directamente a la granja huevo sonriente, los mejores huevos con la mejor calidad.
+    
+        section(style='text-align: center;')
+            h2 Nuestros productos
+            .carousel.estilo-carrusel
+                a.carousel-item(href='#one!')
+                    img(src='/Imagenes/gallina1.jpg')
+                a.carousel-item(href='#two!')
+                    img(src='/Imagenes/Huevos.jpg')
+                a.carousel-item(href='#three!')
+                    img(src='/Imagenes/gallina5.jpg')
+                a.carousel-item(href='#four!')
+                    img(src='/Imagenes/gallinaP.jpg')
+                a.carousel-item(href='#five!')
+                    img(src='/Imagenes/yema.jpg')
+                a.carousel-item(href='#six!')
+                    img(src='/Imagenes/cubeta.png')
+                a.carousel-item(href='#seven!')
+                    img(src='/Imagenes/yema2.jpg')
+                    
+
+    script(src="/materialize/js/jquery-3.5.1.min.js")
+    script(src="/materialize/js/materialize.min.js")
+    script(src="/carousel.js")
+    
+    block contenido

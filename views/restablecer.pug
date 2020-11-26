@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=, initial-scale=1.0")
+        link(rel="stylesheet", href="/materialize/css/materialize.min.css")
+        link(rel="stylesheet", href="/materialize/css/UsuariosNuevos.css")
+        link(rel="stylesheet", href="/materialize/css/cambios.css")
+        link(rel="stylesheet", href="/css/app.css")
+        link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
+        title Restaurar Contraseña
+    body
+    body.fondo-registro 
+        nav.nav-wrapper.menu
+            a.brand-logo(href='#')  
+            ul#nav-mobile.right.hide-on-med-and-down
+                li
+                    a(href="/" ) volver a la Pagina Inicio
+        section.inicio-registro
+        center
+            .card-panel.registro-panel
+                .contenido-registro
+                    h1 Restaurar contraseña
+                    if error
+                        p.alerta.error= error
+                    form(action="/restablecer" method= "POST" )
+                        .row
+                            .input-field
+                                input#email.validate(type='text' name ='emailUsuario')
+                                label(for='email') Correo Electronico
+                        .row
+                            .input-field
+                                button.waves-effect.waves-light.btn-large( type='submit') Recuperar contraseña
+                            .input-field    
+                                a(href="/Login") Volver a Iniciar sesion
+    script(src="/materialize/js/materialize.min.js") 
+    script(src="/materialize/js/jquery-3.5.1.min.js")          
+    block contenido
+        

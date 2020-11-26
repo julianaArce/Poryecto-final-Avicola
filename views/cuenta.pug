@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="/materialize/css/materialize.min.css")
+        link(rel="stylesheet", href="/materialize/css/cuenta.css")
+        link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
+        title Document
+    body.Imagen-fondo
+        nav.nav-wrapper.menu 
+            ul#nav-mobile.right.hide-on-med-and-down
+                li
+                    a(href="/" ) Cerrar Sesion
+            ul#slide-out.sidenav
+                li.user-view
+                    .background
+                        img(src="imagenes/huevos2.jpg")
+                    a(href="#user")
+                        img.circle(src="imagenes/Admin.png")
+                    a(href="#name")
+                        span.black-text Administrador
+                li
+                    a.waves-effect(href="#!") First Link With Icon
+                li
+                    a.waves-effect(href="#!") Second Link
+
+                li
+                    a.waves-effect(href="#!")  Third Link With Waves
+        button.a.sidenav-trigger.botonMenu(href="#" data-target="slide-out")
+            | Menu
+
+        section(style='width: 100%;text-align: center;')
+            center
+                .card-panel.Inicio
+                    h2 Bienvenido Usuario Administrador 
+                    form
+                        
+                        a(href="/ListaClientes").waves-effect.waves-light.btn-large.boton Lista Clientes 
+                     
+                                
+
+
+
+    script(src="/materialize/js/jquery-3.5.1.min.js")
+    script(src="/materialize/js/materialize.min.js") 
+    script(src="/barra.js")        
+    block contenido

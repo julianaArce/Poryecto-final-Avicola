@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="/materialize/css/materialize.min.css")
+        link(rel="stylesheet", href="/materialize/css/UsuariosNuevos.css")
+        link(rel="stylesheet", href="/materialize/css/cambios.css")
+        link(rel="stylesheet", href="/css/app.css")
+        link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
+        title Registro Usuarios Nuevos
+    body.fondo-registro
+        nav.nav-wrapper.menu
+            a.brand-logo(href='#')  
+            ul#nav-mobile.right.hide-on-med-and-down
+                li
+                    a(href="/" ) volver a la Pagina Inicio
+        section.inicio-registro
+        center
+            .card-panel.registro-panel
+                .contenido-registro
+                    h1 REGISTRO
+                    //if errores
+                        each error in errores
+                            .alerta.error=error.message
+                    if locals.mensajes
+                        .alertas
+                            each categoria in Object.keys(locals.mensajes)
+                                each error in mensajes[categoria]
+                                    .alerta(class=`${categoria}`)
+                                        p=error 
+                    form(action="/UsuariosNuevos" method = "POST")
+                        .row
+                            .input-field
+                                input#first_name.validate(type='text' name ='nombreUsuario' value=nombreUsuario)
+                                label(for='first_name') Nombre
+                            .input-field
+                                input#last_name.validate(type='text' name ='apellidoUsuario' value=apellidoUsuario )
+                                label(for='last_name') Apellido
+                        .row
+                            .input-field
+                                input#Identificacion.validate(type='number' name ='identificacionUsuario' value=identificacionUsuario )
+                                label(for='Identificacion') CC
+                        .row
+                            .input-field
+                                input#frmDireccion.validate(type='text' name ='direccionUsuario' value=direccionUsuario)
+                                label(for='frmDireccion') Dirección
+                        .row
+                            .input-field
+                                input#password.validate(type='password' name ='passwordUsuario' value=passwordUsuario)
+                                label(for='password') Contraseña
+                        .row
+                            .input-field
+                                input#email.validate(type='text' name ='emailUsuario' value=emailUsuario)
+                                label(for='email') Correo Electronico
+                        .row
+                            .input-field
+                                input#contacto.validate(type='number' name ='contactoUsuario' value=contactoUsuario)
+                                label(for='contacto') Telefono
+                    
+                        button.waves-effect.waves-light.btn-large( type='submit' name='action' style='background-color: red;') GUARDAR REGISTRO
+
+                    
+                                  
+
+            
+                   
+    script(src="/materialize/js/materialize.min.js") 
+    script(src="/materialize/js/jquery-3.5.1.min.js")          
+    block contenido
+    

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="/materialize/css/materialize.min.css")
+        link(rel="stylesheet", href="/materialize/css/perfil.css")
+        link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
+        title Perfil 
+    body.Imagen-fondo
+        nav.nav-wrapper.menu 
+            ul#nav-mobile.right.hide-on-med-and-down
+                li
+                    a(href="/cerrar-sesion" ) Cerrar Sesion
+        section(style='width: 100%;text-align: center;')
+            center
+                .card-panel.Inicio
+                    center
+                        h2 Bienvenido Usuario a su cuenta
+                        form(action=`/datosPerfil/${cliente.url}` )
+                            .row
+                            a
+                                button.waves-effect.waves-light.btn-large( type='submit' name='action' style='background-color: #0e0e0e;') Ir a Mi perfil
+    
+    
+    script(src="/materialize/js/materialize.min.js") 
+    script(src="/materialize/js/jquery-3.5.1.min.js")          
+    block contenido
+

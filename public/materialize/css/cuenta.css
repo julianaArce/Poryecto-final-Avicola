@@ -1,0 +1,52 @@
+.Imagen-fondo{
+    background-image: url(/Imagenes/cubeta.png);
+	background-size: cover;
+	background-position: center;
+	background-blend-mode: soft-light;
+}
+
+.Inicio{
+	width: 50%;
+	text-align: center;
+	background-color: #ffffffc4;
+}
+
+.opciones-cuenta{
+	width: 50%;
+	text-align: center;
+	background-color: #ffffff54;
+}
+.estilo-opcion{
+	color: #8c4c15;
+	font-weight: 700;
+	font-family: auto;
+	-webkit-text-stroke: 1px black;
+}
+.boton{
+	background-color: #0e0e0e;
+}
+nav.nav-wrapper.menu {
+    background-color: rgb(0 0 0);
+    
+}
+
+.botonMenu{
+	font-size: 150%;
+	
+}
+.actualizarbtn{
+	margin-left: -40%;
+}
+.eliminarbtn{
+	margin-left: 0%;
+	margin-top: -11%;
+}
+.hacerpedidobtn{
+	margin-left: -40%;
+	margin-top: -18%;
+	margin-right: -82%;
+}
+.verpedidobtn{
+	margin-left: 0%;
+	margin-top: -5%;
+}
